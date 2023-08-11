@@ -1,0 +1,219 @@
+/* WeatherPage.css */
+
+/* Add the new CSS for the video background */
+body {
+    margin: 0;
+    overflow: auto;
+    background-color: #ffffff00;
+  }
+  
+  .video-background {
+    position: fixed;
+    top: 0;
+    left: -50;
+    width: 150%;
+    height: 150%;
+    z-index: -1;
+  }
+  
+  #background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+  
+  .weather-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+  }
+  
+  .container {
+    z-index: 1;
+    position: relative;
+  }
+  
+  .content {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 24px;
+    border-radius: 8px;
+  }
+  
+  /* Add any other custom styling for the content here */
+  
+  /* Continue with the existing CSS */
+  
+  .container {
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .content {
+    width: 100%;
+    max-width: 800px; /* You can adjust this value to control the content's maximum width */
+    padding: 16px;
+  }
+  
+  /* Add this new CSS to make the forecast cards responsive */
+  .forecast {
+    margin-top: 16px;
+  }
+  .MuiCard-root {
+    min-height: 167px;
+  }
+  .forecast .MuiCard-root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  /* Adjust the styles for the card content */
+  .forecast .MuiCardContent-root {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .weather-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  /* Add styles to make the WeatherPage more responsive */
+  @media (max-width: 600px) {
+    .content {
+      max-width: 100%;
+    }
+  
+    .forecast .MuiCard-root {
+      width: 100%;
+    }
+  }
+  
+  .weather-page {
+    /* Your existing styles */
+  
+    /* Add these new styles */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Style for the search container */
+  .search-container {
+    backdrop-filter: blur(5px);
+    background-color: rgba(50, 50, 50, 0.3);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+  }
+  
+  /* Style for the current temperature container */
+  .current-temp-container {
+    backdrop-filter: blur(5px);
+    background-color: rgba(50, 50, 50, 0.3);
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 16px;
+    text-align: center;
+  }
+  
+  /* Style for the 3-hour forecast container */
+  .three-hour-forecast-container,
+  .five-day-forecast-container {
+    backdrop-filter: blur(5px);
+    background-color: rgba(50, 50, 50, 0.3);
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 16px;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Center all the text including titles */
+  .weather-card,
+  .forecast-section {
+    text-align: center;
+  }
+  
+  .forecast-scroll-container {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  }
+  
+  .forecast-scroll-container::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  .forecast-scroll-container::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 100, 100, 0.5);
+    border-radius: 30px;
+  }
+  
+  /* Ensure all 5 cards are visible at a time by setting the width to 20% */
+  .forecast-scroll-container > .MuiCard-root {
+    flex: 0 0 calc(20% - 8px); /* Set the width to 20% minus the gap */
+    margin-top: 3px;
+    margin-bottom: 3px;
+    background-color: rgba(100, 100, 100, 0.3);
+}
+  
+  .MuiGrid-spacing-xs-2 > .MuiGrid-item {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(21% - 8px);
+    margin-top: 10px;
+    margin-bottom: 3px;
+  }
+  
+  /* Styles for the search input */
+  .MuiFormControl-root.MuiTextField-root.search-input.MuiFormControl-fullWidth .MuiInputBase-input {
+    background-color: transparent; /* Set background color to transparent */
+    color: #fff; /* Set text color to white */
+    border: 1px solid #fff; /* Set border color to white */
+  }
+  
+  /* Add error styles */
+  .MuiFormControl-root.MuiTextField-root.search-input.MuiFormControl-fullWidth .MuiInputBase-input.error {
+    border-color: #f44336;
+  }
+  
+  /* Optional: Add a label for the input */
+  .MuiFormControl-root.MuiTextField-root.search-input.MuiFormControl-fullWidth .MuiFormLabel-root {
+    color: #fff; /* Set label color to white */
+  }
+  
+  /* Optional: Add styles for placeholder text */
+  .MuiFormControl-root.MuiTextField-root.search-input.MuiFormControl-fullWidth .MuiInputBase-input::placeholder {
+    color: #fff; /* Set placeholder text color to white */
+  }
+  
+  .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #ffffffaa !important;
+  }
+  
+  .MuiSvgIcon-root {
+    fill: #fff !important;
+}
+
+.MuiTypography-body1 {
+    color: #fff;
+}
+
+.MuiInputLabel-outlined.MuiInputLabel-shrink {
+    transform: translate(14px, -15px) scale(0.75) !important;
+}
