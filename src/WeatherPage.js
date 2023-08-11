@@ -34,8 +34,8 @@ const WeatherPage = () => {
   const [error, setError] = useState(null);
   const [showVideo, setShowVideo] = useState(false);
 
-  const API_KEY = '8b8c466cdb459e5a49d3dc52ebfa2f36';
-  const GOOGLE_GEOCODING_API_KEY = 'AIzaSyD-i6mfq1wXAP4-dOKMoCWCYX0rQR0tyYI';
+  const API_KEY = 'MAKE A WEATHER API KEY';
+  const GOOGLE_GEOCODING_API_KEY = 'MAKE A GOOGLE API KEY';
 
   const fetchWeatherData = async (query) => {
     setLoading(true);
